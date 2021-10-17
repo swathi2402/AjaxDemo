@@ -22,21 +22,21 @@ function makeAJAXcall(methodType, url, callback, async = true, data = null) {
         xhr.send();
     console.log(methodType + " request sent to server");
 }
-const getUrl = "http://localhost:8000/employees/1";
+const getUrl = "http://localhost:3000/employees/1";
 function getUserDetails(data) {
     console.log("Get user data :" + data)
 }
 makeAJAXcall("GET", getUrl, getUserDetails);
 
-const deleteUrl = "http://localhost:8000/employees/4";
+const deleteUrl = "http://localhost:3000/employees/4";
 function UserDeleted(data) {
     console.log("User deleted " + data)
 }
 makeAJAXcall("DELETE", deleteUrl, UserDeleted, false);
 
-const postUrl = "http://localhost:8000/employees/";
+const postUrl = "http://localhost:000/employees/";
 const empData = {"name": "Jame", "salary": "60000"};
 function userAdded(data) {
-    console.log("User added" + data)
+    console.log("User added " + data)
 }
 makeAJAXcall("POST", postUrl, userAdded, true, empData);
